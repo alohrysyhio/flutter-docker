@@ -1,7 +1,7 @@
 # Please read.
 
 ## Who's this for ?
-Mainly for fedora users, and the reason is that I only know how to make android physical devices work on fedora, they might be working by default in other distros, you can try.
+Mainly for fedora users, and the reason is that I only know how to make android physical devices work on fedora, they might be working by default in other distros, you can try. Also, emulators are not supported, you can add them yourself though.
 
 ## How to use ?
 
