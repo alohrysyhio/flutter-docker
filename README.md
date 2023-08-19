@@ -18,5 +18,5 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", ATTR{idProduct}=="YYYY", MODE="0
 **- Open Dockerfile and look for the same command that you entered and also change the XXXX and YYYY with you device's IDs.**
 
 ### Step 2:
-**- Put the .devcontainer/ folder in your project directory.**
+**- Put the .devcontainer/ folder in your project directory.**\
 Idealy you should have the Dev Containers extention installed in VScode. Then you can just reopen the floder in the container and everything should hopefully be working.
