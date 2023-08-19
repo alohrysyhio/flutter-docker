@@ -10,8 +10,8 @@ USER flutterdev
 ENV HOME=/home/flutterdev
 WORKDIR $HOME
 
-# Prerequisites
-RUN echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee7", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/51-android.rules > /dev/null \
+# Prerequisites (for XXXX and YYYY, see README.md)
+RUN echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", ATTR{idProduct}=="YYYY", MODE="0666", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/51-android.rules > /dev/null \
     && sudo service udev restart
 
 # Prepare Android directories and system variables
@@ -23,7 +23,7 @@ ENV PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 ENV PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest"
 ENV PATH="$PATH:$ANDROID_HOME/platform-tools"
 
-#Get Android Shit
+# Download Android tools and set everything up
 ENV ANDROID_CMDLINE_VERSION=9477386
 RUN wget -O cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_CMDLINE_VERSION}_latest.zip \
     && unzip cmdline-tools.zip \
